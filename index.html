@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Опрос</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="survey">
+        <div action="#!" class="survey__form">
+          <div class="survey__fieldset">
+            <div class="survey__legend">
+              <img src="./images/ava.png" alt="avatar" class="survey__ava" />
+              <div class="survey__question">
+                <p>Оператор опроса</p>
+                <p id="question-text"></p>
+              </div>
+            </div>
+            <div class="survey__progress">
+              <div class="survey__progress-line">
+                <div id="progress-fill" class="survey__progress-fill"></div>
+              </div>
+            </div>
+            <div class="survey__answer" id="answers-container">
+              <!-- Ответы будут добавлены здесь -->
+            </div>
+          </div>
+          <button type="button" class="survey__button" onclick="nextStep()">
+            Следующий вопрос -->
+          </button>
+          <p class="finish"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

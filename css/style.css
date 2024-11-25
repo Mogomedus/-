@@ -1,0 +1,163 @@
+body {
+  background-image: url(../images/low-angle-office.webp);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Добавьте сюда ваши стили CSS */
+.survey {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+}
+
+.survey__form {
+  box-shadow: 1 5 10 15 black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.survey__fieldset {
+  margin-bottom: 50px;
+}
+
+.survey__legend {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.survey__ava {
+  width: 60px;
+  margin-right: 20px;
+  cursor: no-drop;
+}
+
+.survey__question p:first-child {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.survey__progress {
+  width: 100%;
+  height: 10px;
+  margin-bottom: 20px;
+}
+
+.survey__progress-line {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.survey__progress-fill {
+  width: 20%;
+  height: 10px;
+  background: linear-gradient(45deg, #1fadff 0, #2684bb 100%);
+  border-radius: 5px;
+  transition: width 0.3s;
+}
+
+.survey__answer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.survey__answer-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bbb;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.survey__answer-item-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  margin-right: 15px;
+  position: relative;
+}
+
+.survey__answer-item-circle:after {
+  width: 20px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: url(../images/check.svg);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.survey__answer-item-text {
+  line-height: 1.5;
+}
+
+.survey__answer-item input {
+  display: none;
+}
+
+.survey__answer-item input:checked + .survey__answer-item-circle {
+  border: 1px solid #2684bb;
+}
+
+.survey__answer-item input:checked + .survey__answer-item-circle:after {
+  opacity: 1;
+}
+
+.survey__button {
+  width: 300px;
+  font-weight: 700;
+  color: #fff;
+  padding: 10px 0;
+  background: linear-gradient(45deg, #1fadff 0, #2684bb 100%);
+  border-radius: 5px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.survey__button:hover{
+  background: linear-gradient(45deg, #1b98e0 0, #1c6792 100%);
+  transform: scale(1.055);
+}
+
+.survey__button:active{
+  background: linear-gradient(45deg, #1886c5 0, #17577c 100%);
+  transform: scale(0.955);
+}
+
+.finish{
+  font-weight: 700;
+  color: #fff;
+  padding: 2px;
+  background: linear-gradient(45deg, #1fadff 0, #2684bb 100%);
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 5px;
+}
